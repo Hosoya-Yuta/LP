@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@import 'base';
+
+.line-wrapper {
+  height: 14.6rem;
+  background-color: rgba(180, 216, 248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 2.4rem;
+  }
+}
+.qr-code {
+  width: 11.4rem;
+  height: 11.4rem;
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255);
+  border: 0.1rem solid rgba(112, 112, 112);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4.5rem;
+  box-sizing: border-box;
+}
+.copyright {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 118, 210);
+  color: rgba(225, 225, 225);
+  font-size: 2.4rem;
+}
+.hold-footer {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .line-wrapper {
+    flex-direction: column;
+    height: 27.5rem;
+    p {
+      font-size: 0;
+    }
+    p::before {
+      font-size: 2.1rem;
+      line-height: 4rem;
+      white-space: pre;
+      content: 'LINE＠でも無料相談を受付中！\A友達追加登録はこちらから↓↓'
+    }
+  }
+  .qr-code {
+    width: 11.5rem;
+    height: 11.5rem;
+    font-size: 1.6rem;
+    margin: 2rem 0 0 0;
+  }
+  .copyright {
+    height: 8rem;
+    margin-bottom: 5.4rem;
+    font-size: 0;
+    &:before {
+      font-size: 1.4rem;
+      line-height: 3.2rem;
+      white-space: pre;
+      text-align: center;
+      content: 'Copyright © 2020 , \A ABCプログラミングスクール';
+    }
+  }
+  .hold-footer {
+    width: 100%;
+    height: 5.4rem;
+    text-decoration: none;
+    font-size: 1.9rem;
+    color: rgba(255, 255, 255);
+    background-color: rgba(239, 83, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+  }
+}
